@@ -115,7 +115,7 @@ def login():
 
 
 #menu
-def user_menu(userId):
+def usermenu(userId):
     while True:
         print("1.Check Balance") 
         print("2.Deposit")
@@ -137,6 +137,32 @@ def user_menu(userId):
         elif choice=="4":
             break 
 
+def adminmenu(adminId):
+    while True:
+        print("1.Create Account")
+        print("2.Delete Account")
+        print("3.Modify Account")
+        print("4.Exit")
+        choice = input("Choose: ")
+
+
+        #account = get()
+
+        if choice=="1":
+            user = int(input("User: "))
+            create_account(user)
+        elif choice=="2":
+            account = int(input("Account: "))
+            delete_account(account)
+        elif choice=="3":
+            account = int(input("Account: "))
+            balance = float(input("Balance: "))
+
+            modify_account(account, balance)
+
+        elif choice=="4":
+            break
+
 #testing. 
 if __name__ == "__main__":
     setup_database()
@@ -148,4 +174,7 @@ if __name__ == "__main__":
         print("Invalid login")
     else:
         user_id, role = user
-        user_menu(user_id)
+        if role == "customer":
+            usermenu(user_id)
+        elif role == "admin":
+            adminmenu(user_id)
