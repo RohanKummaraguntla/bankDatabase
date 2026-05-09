@@ -9,9 +9,11 @@ A simple banking system built with Python and SQL. It supports user login and ba
 1. Make sure Python 3 is installed:
 ```bash
 python3 --version
+```
 2. Run the program:
+```bash
 python3 main.py
-
+```
 ## Test Login Info
 
 1. Admin
@@ -26,7 +28,7 @@ Password: 1111
 
 ### User Functions
 1. Check balance
-2. Deposit money
+2. Deposit money  
 3. Withdraw money
 
 ### Admin Functions
