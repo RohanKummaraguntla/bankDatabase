@@ -17,11 +17,11 @@ python3 main.py
 ## Test Login Info
 
 1. Admin
-Username: admin
+Username: admin /
 Password: 1234
 
 2. User
-Username: user
+Username: user /
 Password: 1111
 
 ## Features
